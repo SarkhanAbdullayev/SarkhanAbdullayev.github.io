@@ -1,0 +1,151 @@
+//?colors
+
+$main: #1a2b47;
+$secondary : #b6bfe6;
+
+
+//?reset
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+};
+
+a {
+    text-decoration: none;
+}
+
+
+
+//?styles
+
+li {
+    list-style: none;
+    gap: 5px;
+    display: flex;
+    margin-bottom: 10px;
+    color: #d7dbeb;
+    transition: 200ms;
+}
+
+li::selection {
+    color: $main;
+    background-color: $secondary;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: $secondary;
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #2b4670;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $main;
+}
+
+
+.main {
+    background-color: $main;
+    height: 100vh;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 15px;
+        width: 370px;
+        min-height: 250px;
+        border-radius: 22px;
+        background: linear-gradient(145deg, #1c2e4c, #172740);
+        box-shadow:  7px 7px 14px #0d1624,-7px -7px 14px #27406a;
+        .h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: $secondary;
+            font-weight: 300;
+        }
+        .form {
+            height: 50px;
+            padding: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 9px;
+            background-color: $main;
+            box-shadow: inset -4px 2px 6px #0e1726, inset -6px -3px 15px #263f68;
+        }
+        .list-box {
+            padding: 15px 6px 10px 15px;
+            border-radius: 9px;
+            background-color: $main;
+            flex-grow: 1;
+            box-shadow: inset 0px 2px 6px #0e1726, inset 1px -3px 15px #263f68;
+            ul {
+                overflow-y: scroll;
+                max-height: 240px;
+            }
+        }
+        .clear {
+            background: linear-gradient(145deg, #D0DAFF, #7E849F);
+            border-radius: 5px;
+            box-shadow: 0.61px 0.61px 1px #989fc0, -0.61px -0.61px 1px #b6bfe6;
+            width: 20.3%;
+            height: 25px;
+            margin-top: 15px;
+            margin-right: 2px;
+            align-self: flex-end;
+        }
+    }
+}
+
+.form {
+    .input {
+        width: 75%;
+        border-radius: 5px;
+        padding: 0px 10px;
+        outline: none;
+        border: none;
+        color: $secondary;
+        background-color: $main;
+        box-shadow: inset -4px 2px 6px #0e1726, inset -6px -3px 15px #263f68;
+    }
+    .add {
+        width: 20%;
+        background: linear-gradient(145deg, #D0DAFF, #7E849F);
+        border-radius: 5px;
+        box-shadow: 0.61px 0.61px 1px #989fc0, -0.61px -0.61px 1px #b6bfe6;
+    }
+    
+}
+
+.trash {
+    background-color: $main;
+    color: #d040c2;
+    cursor:pointer;
+}
+
+.deleted {
+    text-decoration: line-through 2px $main;
+    font-size: 13px;
+    // transition: 200ms;
+}
