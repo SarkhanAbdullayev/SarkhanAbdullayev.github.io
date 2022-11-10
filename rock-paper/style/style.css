@@ -1,0 +1,271 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+}
+
+.content {
+  position: relative;
+  padding-top: 40px;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
+}
+
+.header {
+  padding: 12px 15px;
+  margin: 0px auto 35px;
+  width: 45%;
+  min-width: 320px;
+  height: 120px;
+  border: 2px solid hsl(217deg, 16%, 45%);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.score {
+  width: 110px;
+  height: 80px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  align-items: center;
+}
+.score .score-text {
+  color: hsl(229deg, 64%, 46%);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.score .score-amount {
+  color: hsl(229deg, 25%, 31%);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.psr {
+  margin: 0px auto;
+  width: 350px;
+  height: 318px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-image: url(../images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px;
+}
+.psr .hand {
+  transition: 200ms;
+}
+.psr .hand:hover {
+  transform: rotate(-15deg);
+  cursor: pointer;
+}
+
+.paper, .rock, .scissors {
+  width: 140px;
+  height: 145px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paper img, .rock img, .scissors img {
+  width: 100%;
+  height: 100%;
+}
+
+.paper {
+  margin-right: 20px;
+}
+
+.scissors {
+  margin-left: 20px;
+}
+
+.second-page {
+  margin: 60px auto 0px;
+  width: 640px;
+  height: 300px;
+  display: none;
+}
+.second-page .mychoice, .second-page .compchoice {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second-page .mychoice h3, .second-page .compchoice h3 {
+  color: white;
+  margin-bottom: 35px;
+}
+.second-page .mychoice img, .second-page .compchoice img {
+  width: 100%;
+  height: 100%;
+}
+.second-page .againdiv {
+  width: 34%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.second-page .againdiv h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+.second-page .againdiv .again {
+  width: 154px;
+  height: 36px;
+  cursor: pointer;
+  color: hsl(0deg, 74%, 49%);
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+.second-page .scissors {
+  margin-left: unset;
+}
+
+.mychoice .am {
+  width: 190px;
+  height: 190px;
+}
+.mychoice .am div {
+  width: 100%;
+  height: 100%;
+}
+
+.compchoice .comp {
+  width: 190px;
+  height: 190px;
+}
+.compchoice .comp div {
+  width: 100%;
+  height: 100%;
+}
+
+.rules {
+  padding: 10px;
+  height: 320px;
+  width: 300px;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  border-radius: 8px;
+  transform: translateX(-50%);
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+.rules .rule-box {
+  width: 100%;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rules .rule-box h3 {
+  font-weight: 700;
+  color: hsl(229deg, 25%, 31%);
+}
+.rules .rule-box .x {
+  border: none;
+  background-color: white;
+  color: rgb(151, 150, 150);
+  cursor: pointer;
+  font-size: 18px;
+}
+.rules img {
+  height: 220px;
+}
+
+.rules-call {
+  background-color: hsl(229deg, 25%, 31%);
+  border: 2px solid hsl(217deg, 16%, 45%);
+  color: white;
+  padding: 5px 25px;
+  border-radius: 6px;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin: 0px auto 90px;
+  }
+  .second-page {
+    width: 98%;
+    height: unset;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    justify-content: space-between;
+  }
+  .second-page h3 {
+    font-size: 15px;
+  }
+  .second-page .mychoice {
+    width: 45%;
+    height: 50%;
+    flex-direction: column-reverse;
+  }
+  .second-page .mychoice .am {
+    width: 140px;
+    height: 143px;
+    margin-bottom: 30px;
+  }
+  .second-page .againdiv {
+    order: 1;
+    margin: 20px auto;
+  }
+  .second-page .againdiv .scoreh1 {
+    font-size: 44px;
+    width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .second-page .againdiv .again {
+    width: 230px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  .second-page .compchoice {
+    width: 45%;
+    height: 50%;
+    flex-direction: column-reverse;
+  }
+  .second-page .compchoice .comp {
+    width: 140px;
+    height: 143px;
+    margin-bottom: 30px;
+  }
+  .rules-call {
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 40px;
+    padding: 12px;
+    font-size: 19px;
+  }
+}/*# sourceMappingURL=style.css.map */

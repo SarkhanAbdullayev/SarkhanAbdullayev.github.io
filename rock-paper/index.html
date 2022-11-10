@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <div class="score">
+                <div class="score-text">SCORE</div>
+                <div class="score-amount">0</div>
+            </div>
+        </div>
+        <div class="psr">
+            <div id="paper" class="hand paper">
+                <img src="./images/paper.png" alt="" onclick="mychoice('paper')">
+            </div>
+            <div id="scissors" class="hand scissors">
+                <img src="./images/scissors.png" alt="" onclick="mychoice('scissors')">
+            </div>
+            <div id="rock" class="hand rock">
+                <img src="./images/rock.png" alt="" onclick="mychoice('rock')"></div>
+            </div>
+        <div class="second-page">
+            <div class="mychoice">
+                <h3>YOU PICKED</h3>
+                <div class="am">
+                    <img id="myimg" src="./images/paper.png" alt="">
+                </div>
+            </div>
+            <div class="againdiv">
+                <h1 class="scoreh1"></h1>
+                <button class="again" onclick="playagain()">PLAY AGAIN</button>
+            </div>
+            <div class="compchoice">
+                <h3>THE HOUSE PICKED</h3>
+                <div class="comp">
+                    <img id="compimg" src="./images/rock.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="rules">
+            <div class="rule-box">
+                <h3>RULES</h3>
+                <button class="x" onclick="rulesclose()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <img src="./images/image-rules.svg" alt="">
+        </div>
+        <button class="rules-call" onclick="rulesopen()">RULES</button>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
