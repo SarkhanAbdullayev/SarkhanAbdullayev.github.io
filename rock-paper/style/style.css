@@ -212,6 +212,9 @@
 }
 
 @media (max-width: 600px) {
+  .psr {
+    margin: 0px auto 90px;
+  }
   .header {
     margin: 0px auto 13%;
   }
@@ -219,7 +222,7 @@
     width: 98%;
     height: unset;
     flex-wrap: wrap;
-    margin: 0px auto;
+    margin: 0px auto 19px;
     justify-content: space-between;
   }
   .second-page h3 {
@@ -263,9 +266,9 @@
   }
   .rules-call {
     transform: translateX(-50%);
-    left: 50%;
-    bottom: 40px;
-    padding: 12px;
+    margin-left: 50%;
+    padding: 10px 48px;
     font-size: 19px;
+    position: static;
   }
 }/*# sourceMappingURL=style.css.map */
