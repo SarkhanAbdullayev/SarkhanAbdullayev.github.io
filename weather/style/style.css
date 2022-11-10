@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.content {
+  height: 100vh;
+  background-image: url(../weather.jpg);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  width: 500px;
+  height: 103px;
+  position: relative;
+  top: 350px;
+  left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .temperature h1 {
+  font-size: 125px;
+  height: 129px;
+  font-weight: 400;
+  color: white;
+}
+.main .citytime .city {
+  color: white;
+  font-size: 53px;
+}
+.main .citytime .time {
+  color: white;
+}
+.main .descriptionDiv .iconimg {
+  width: 50px;
+  height: 50px;
+}
+.main .descriptionDiv .descriptP {
+  color: white;
+}
+
+.rightbar {
+  background-color: rgb(28, 71, 112);
+  width: 35%;
+  height: 100%;
+  opacity: 0.4;
+  padding: 25px 40px;
+}
+.rightbar .top {
+  height: 50%;
+  width: 100%;
+  border-bottom: 1px solid white;
+  display: none;
+}
+.rightbar .bottom {
+  height: 50%;
+  width: 100%;
+  padding-top: 35px;
+  border-bottom: 1px solid white;
+}
+.rightbar .bottom h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  opacity: 1 !important;
+}
+.rightbar .bottom .weatherinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rightbar .bottom .weatherinfo > div {
+  display: flex;
+  justify-content: space-between;
+}
+.rightbar .bottom .weatherinfo > div > h3, .rightbar .bottom .weatherinfo > div p {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .main {
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .content .main .citytime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .rightbar {
+    width: 100%;
+    height: 50%;
+  }
+  .content .rightbar .bottom {
+    height: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
