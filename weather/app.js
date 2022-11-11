@@ -16,15 +16,14 @@ let key = 'f54c305213296de227c8786a5bcf81cd'
 let weather = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=40.4226048&lon=49.8991104&appid=f54c305213296de227c8786a5bcf81cd`);
 
 
-weather.then(res => {
-    return res.json()
-}).then(post => {
+weather.then(res => res.json())
+    .then(post => {
     console.log(post);
-    let tarix = new Date(post.dt);
+    let currentData = new Date(post.dt);
     // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     temph1.innerHTML = `${Math.round(post.main.temp - 273.15)}&deg`;
     city.innerHTML = `${post.name.replace(" City", "")}`;
-    time.innerHTML = `${tarix.toGMTString()}`;
+    time.innerHTML = `${currentData.toGMTString()}`;
     img.src = `http://openweathermap.org/img/wn/${post.weather[0].icon}@2x.png`
     descriptP.innerHTML = `${post.weather[0].main}`;
 
