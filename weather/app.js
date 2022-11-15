@@ -37,3 +37,5 @@ navigator.geolocation.getCurrentPosition((res) => {
         pressure.innerHTML = `${post.main.pressure}hPa`
     });
 })
+
+
