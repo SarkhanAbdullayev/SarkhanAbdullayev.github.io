@@ -10,6 +10,7 @@
 
 .content {
   height: 100vh;
+  min-height: 900px;
   display: grid;
   grid-template-rows: 230px 1fr;
 }
@@ -22,6 +23,7 @@
   align-items: center;
   position: relative;
   padding-top: 22px;
+  min-height: 300px;
 }
 .main .addressH1 {
   color: white;
