@@ -1,3 +1,1 @@
-# SarkhanAbdullayev.github.io
-portfolio
-# sarkhanabdullayev.github.io
+click on the Link to see the project https://sarkhanabdullayev.github.io/todolist/
